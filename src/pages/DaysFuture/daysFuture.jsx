@@ -19,21 +19,26 @@ const DaysFuture = () => {
 
   return (<>
   
-    <div className='divTable'>  {loading && 
+      {loading && 
     <img src='loading.gif'/>}
       {weatherFuture && !loading &&(
-   
+      <div className='daysfuture'> 
+        <div className='fixed-row '>  
+        
+            <div className='day_table'>
+            </div>
+              {Array.from({ length: 8 }).map((_, i) => (
+            <div key={i} className='td_hours'> {formatHour(0, i)}
+            </div> 
+              ))
+              }
+         </div> 
+      <div className='divTable'>
+        
+      
         <table>
           <thead>
-            <tr className='tr_hours'>
-              <th className='day_table'>
-              </th>
-              {Array.from({ length: 8 }).map((_, i) => (
-              <th key={i} className='td_hours'> {formatHour(0, i)}
-              </th> 
-               ))
-               }
-            </tr>  
+           
           </thead>
           <tbody>
             { Object.values(weatherFuture).map( (day) => (
@@ -60,9 +65,11 @@ const DaysFuture = () => {
             )).slice(1)
             }
           </tbody>
- 
-        </table> )}
-    </div></>
+        </table> 
+       
+         </div>
+       </div> )}
+    </>
   )
 }
 

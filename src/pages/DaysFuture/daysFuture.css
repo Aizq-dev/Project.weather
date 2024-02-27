@@ -1,19 +1,50 @@
+.daysfuture{
+  
+  
+ max-width: 100%;
+overflow-x: auto;
+
+  
+}
+.fixed-row {
+ 
+  width: 100%;
+  max-height: 60vh;
+ background-color: #4CAF50;
+ border: 1px solid #dddddd;display: flex;
+  flex-direction: row;
+ 
+  text-align: center;
+  
+}
+.td_hours {
+  
+  height: 20px;
+  border-left: 1px solid #dddddd;
+  min-width: 130px;
+  width: 135px;
+}
+.td_table{
+ width: 130px;
+}
+.day_table{width: 30px;}
+
+
 .icon_table{
     width: 30%;
     height: 30%;
 
 }
-.divTable{
-   max-width: 100%;
-   max-height: 60vh;
-   overflow-x:auto;
-   overflow-y: auto;
-    position: relative;
+.divTable{ max-height: 60vh;
+  overflow-y: auto;
+  
+  
+    
 }
 .divTable > img{
     width: 50px;
     height: 50px;
-
+position: relative;
 }
 .temp_table{
     display: flex;
@@ -28,10 +59,10 @@
     gap: 5%;
     
 }
-.td_table{
-  width: 130px;
-}
+
+
 table {
+  
     border-collapse: collapse;
     width: 100%;
     height:100%;
@@ -41,7 +72,7 @@ table {
   td, th {
     border: 1px solid #dddddd;
     padding: 2px;
-    text-align: left;
+    text-align: center;
   }
   
 
@@ -49,14 +80,5 @@ table {
     background-color: #4CAF50;
     color: white;
   }
-.day_table{width: 30px;}
 
-.tr_hours{position: fixed;
-  top: 165px; /* Distancia desde la parte superior */
-  right: 21px; /* Distancia desde el borde derecho */
- 
-  padding: 20px;
-}
-.td_hours{
-  min-width: 130px;
-}
+
