@@ -20,7 +20,7 @@ const DaysFuture = () => {
   return (<>
   
     <div className='divTable'>  {loading && 
-    <img src='../../../public/loading.gif'/>}
+    <img src='public/loading.gif'/>}
       {weatherFuture && !loading &&(
    
         <table>

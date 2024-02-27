@@ -49,7 +49,7 @@ useEffect(()=>{
       </div>
       <div  className='label_options'>
         {loading && 
-           <img src='../../../public/loading.gif'/>}
+           <img src='public/loading.gif'/>}
         {cities && !loading &&
         <ul className='options' id='options'>
           { Object.values(cities).map((option)=>(

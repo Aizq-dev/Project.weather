@@ -18,7 +18,7 @@ const {weatherData,loading}=useContext(WeatherDataContext)
     
         <div className='main'>
             {loading && 
-            <img src='../../../public/loading.gif'/>}
+            <img src='public/loading.gif'/>}
     {weatherData.name.length > 2 && !loading &&
             <div className=' info'>
                     <div className='temp'>
