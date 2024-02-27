@@ -16,10 +16,9 @@ function App() {
   <Header/>
   </header>
   <main className='mainApp'>
-  <div className='presentDay'>
-                <h1>{weatherData.name}, {weatherData.country}</h1>
-             </div>
-    
+    <div className='presentDay'>
+       <h1>{weatherData.name}, {weatherData.country}</h1>
+    </div>
     <Outlet />
     <Button5days/>
   </main>

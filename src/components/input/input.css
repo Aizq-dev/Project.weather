@@ -1,4 +1,9 @@
 
+  .search:hover{
+    -webkit-box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.75);
+  }
   .div_input {
     display: flex;
     height: 45px;
@@ -27,10 +32,12 @@
     border: 2px solid black;
     width: 95%;
     margin-right: 300px;
+
   }
   .label_options{
     transition: 0.4s;
     background-color: white;
+    color:black ;
 
   }
   .label_options > ul{

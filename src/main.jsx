@@ -15,9 +15,11 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <BrowserRouter>  
         <Routes>
           <Route path="/" element={<App/>}>
-            <Route path='/today' element={<PresentDay/>}/>
+          <Route index element={<PresentDay/>}/>
+            <Route path='today' element={<PresentDay/>}/>
             <Route path='5-days-forecast' element={<DaysFuture/>}/>
           </Route>
+          
         </Routes>
       </BrowserRouter> 
      </WeatherDataProvider>
