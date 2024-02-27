@@ -25,11 +25,11 @@ const DaysFuture = () => {
    
         <table>
           <thead>
-            <tr>
+            <tr className='tr_hours'>
               <th className='day_table'>
               </th>
               {Array.from({ length: 8 }).map((_, i) => (
-              <th key={i}> {formatHour(0, i)}
+              <th key={i} className='td_hours'> {formatHour(0, i)}
               </th> 
                ))
                }
@@ -41,7 +41,7 @@ const DaysFuture = () => {
                 <th className='day_table'>{getDateFormat(day[0].date)}
                 </th>
                 {day.map((hourInterval,indx) => (
-                <td key={indx*5}>
+                <td key={indx*5} className='td_table'>
                   <div className='temp_table'>
                     <img className='icon_table' src={getIcon(hourInterval.icon)}/>
                     <h3>{tempCelsius(hourInterval.temp_max)}ºC/</h3>  
