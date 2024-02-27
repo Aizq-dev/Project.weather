@@ -11,7 +11,7 @@ overflow: hidden;
   justify-content: space-around;
   align-items: center;
 }
-
+.App{background-color: rgba(27, 125, 216, 0.795)}
 /* Backgrounds personalizados segun meteorologia */
 .App01d{
   background-image: url('../public/despejado.jpg');
