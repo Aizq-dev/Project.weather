@@ -12,6 +12,7 @@ export const myPosition = (setLat,setLon,setTrigger,setPermiss)=>{
       setLat(position.coords.latitude)
       setLon(position.coords.longitude)
       setTrigger(prevTrigger => !prevTrigger)
+      setPermiss(true)
 
     },
     (error) => {

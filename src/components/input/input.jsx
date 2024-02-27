@@ -8,7 +8,7 @@ import { WeatherDataContext } from '../../context/weatherDatacontext'
 const input = () => {
 const [query , setQuery]=useState('')
 const [cities ,setCities]=useState('')
-const {setLat, setLon,setTrigger} = useContext(positionContext)
+const {setLat, setLon,setTrigger,setPermiss} = useContext(positionContext)
 const [visible, setVisible] = useState(false);
 const [loading, setLoading]=useState(false)
 const handleKeyPress =(ev)=>{
@@ -20,7 +20,8 @@ const handleKeyPress =(ev)=>{
       }
 
 const handleSearch =() =>{
-  setLoading(true)    
+  setLoading(true)
+  setPermiss(true)    
     fetchCity(query,setCities,setLoading)
 }
 const handleOptionClick= (ev)=>{
