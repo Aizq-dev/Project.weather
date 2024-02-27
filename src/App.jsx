@@ -22,6 +22,7 @@ useEffect(()=>{
   <Header/>
   </header>
   <main className='mainApp'>
+    {!("geolocation" in navigator) &&<p>Accept location permissions or search a city</p>}
    { !loading &&  <div className='presentDay'>
        <h1>{weatherData.name}, {weatherData.country}</h1>
     </div>} 
