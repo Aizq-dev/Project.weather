@@ -12,7 +12,7 @@ export const fetch5days = async ( lat, lon, setWeatherFuture) => {
     const res = await axios.get(`${URL_API}lat=${lat}&lon=${lon}&appid=${Api_Key}`)
     const dataClean = getDataClean(res.data.list)
        setWeatherFuture(dataClean)
-       console.log(dataClean)
+      
        
      
     
