@@ -46,3 +46,7 @@
     list-style: none;
     text-justify: initial;
   }
+  .label_options >img{
+    width: 20px;
+    height: 20px;
+  }

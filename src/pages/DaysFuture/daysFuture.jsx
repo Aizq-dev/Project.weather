@@ -11,15 +11,17 @@ import './daysFuture.css'
 const DaysFuture = () => {
   const [weatherFuture, setWeatherFuture]=useState('')
   const {lat,lon, trigger}=useContext(positionContext)
- 
+ const [loading, setLoading]=useState(true)
   useEffect(()=>{
 
-  if(lat)fetch5days(lat, lon, setWeatherFuture)
+  if(lat)fetch5days(lat, lon, setWeatherFuture, setLoading)
 },[trigger])
 
-  return (
-    <div className='divTable'>
-      {weatherFuture && (
+  return (<>
+  
+    <div className='divTable'>  {loading && 
+    <img src='../../../public/loading.gif'/>}
+      {weatherFuture && !loading &&(
    
         <table>
           <thead>
@@ -60,7 +62,7 @@ const DaysFuture = () => {
           </tbody>
  
         </table> )}
-    </div>
+    </div></>
   )
 }
 

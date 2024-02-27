@@ -8,7 +8,7 @@ import { FetchDataWeather } from '../utils/FetchDataWeather'
 export const WeatherDataContext  = createContext()
 export const WeatherDataProvider =({children})=>{
     const {lat,lon,trigger,setLat,setLon,setTrigger} = useContext(positionContext)
-    
+    const [loading, setLoading]=useState(false)
     const [weatherData , setWeatherData]= useState({
         name :"",
       country:"",
@@ -35,14 +35,15 @@ export const WeatherDataProvider =({children})=>{
      
 
     useEffect(()=>{
-         if(lat){FetchDataWeather(setWeatherData,lat, lon )}
+      setLoading(true)
+         if(lat){FetchDataWeather(setWeatherData,lat, lon,setLoading)}
         
     },[trigger ])
     
 
 
   return (
-   <WeatherDataContext.Provider value={{weatherData}}>
+   <WeatherDataContext.Provider value={{weatherData,loading}}>
 {children}
    </WeatherDataContext.Provider>  
   )

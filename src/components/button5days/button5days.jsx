@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom';
 const Button5days = () => {
     const navigate = useNavigate()
     const location = useLocation().pathname.substring(1)
-    const [message, setMessage]=useState(()=> location === '5-days-forecast' ? 'back' : ' 5-days-forecast')
+    const [message, setMessage]=useState(()=> location === '5-days-forecast'   ? 'back' : ' 5-days-forecast')
     const handleClick = ()=>{
         if(location === '5-days-forecast'){
               setMessage('5-days-forecast')

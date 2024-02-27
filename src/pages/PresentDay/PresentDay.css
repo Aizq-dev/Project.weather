@@ -2,6 +2,10 @@
 .presentDay{
     padding-top: 2rem;
 }
+.main >img {
+    width: 50px;
+    height: 50px;
+}
 .name-icon{
        display: flex;
        justify-content: center;

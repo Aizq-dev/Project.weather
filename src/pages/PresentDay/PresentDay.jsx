@@ -9,15 +9,17 @@ import { useContext } from 'react'
 import { WeatherDataContext  } from '../../context/weatherDatacontext'
 
 const PresentDay = () => {
-const {weatherData}=useContext(WeatherDataContext)
+const {weatherData,loading}=useContext(WeatherDataContext)
 
    
       
   return (
-<> 
-    {weatherData.name.length > 2 && 
+
+    
         <div className='main'>
-            
+            {loading && 
+            <img src='../../../public/loading.gif'/>}
+    {weatherData.name.length > 2 && !loading &&
             <div className=' info'>
                     <div className='temp'>
                         <div className='name-icon'>  
@@ -53,10 +55,10 @@ const {weatherData}=useContext(WeatherDataContext)
            
             </div> 
       
-        
+        } 
         </div>
-     } 
-     </>
+     
+     
       )
       
 }

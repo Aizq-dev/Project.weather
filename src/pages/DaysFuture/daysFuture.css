@@ -10,6 +10,11 @@
    overflow-y: auto;
     
 }
+.divTable > img{
+    width: 50px;
+    height: 50px;
+
+}
 .temp_table{
     display: flex;
     justify-content: center;

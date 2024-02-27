@@ -4,7 +4,7 @@ import axios from 'axios'
 const Api_Key = '9b88334e127b5110b6f05a04bf7a306b'
 const URL_API = 'https://api.openweathermap.org/data/2.5/weather?'
 
-export const FetchDataWeather = async (setWeatherData, lat, lon) => {
+export const FetchDataWeather = async (setWeatherData, lat, lon, setLoading) => {
 
 
   try {
@@ -31,7 +31,7 @@ export const FetchDataWeather = async (setWeatherData, lat, lon) => {
 
 
     })
-
+setLoading(false)
   } catch (error) {
     console.log('Error fetching wheater data',error)
     

@@ -7,11 +7,12 @@ import { WeatherDataContext } from './context/weatherDatacontext';
 import Button5days from './components/button5days/button5days'
 
 function App() {
- const {weatherData}= useContext(WeatherDataContext)
+ const {weatherData,loading}= useContext(WeatherDataContext)
 
   return (
     <>
-  { weatherData && <div id='App' className={`App${weatherData.icon}`}>
+  { weatherData && 
+   <div id='App' className={`App${weatherData.icon}`}>
     <header>
   <Header/>
   </header>
