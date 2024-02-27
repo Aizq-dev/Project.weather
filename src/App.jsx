@@ -22,7 +22,7 @@ useEffect(()=>{
   <Header/>
   </header>
   <main className='mainApp'>
-   { weatherData &&  <div className='presentDay'>
+   { !loading &&  <div className='presentDay'>
        <h1>{weatherData.name}, {weatherData.country}</h1>
     </div>} 
     <Outlet />
