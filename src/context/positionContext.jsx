@@ -8,12 +8,12 @@ export const PositionProvider =({children})=>{
     const [lon, setLon]= useState('')
    //  (-3.7038) 
     const [trigger, setTrigger]=useState(false)
-
+   const[permiss,setPermiss] = useState(true)
 
 
 
   return (
-   <positionContext.Provider value={{lat,setLat,lon,setLon,trigger,setTrigger}}>
+   <positionContext.Provider value={{lat,setLat,lon,setLon,trigger,setTrigger,setPermiss,permiss}}>
 {children}
    </positionContext.Provider>  
   )

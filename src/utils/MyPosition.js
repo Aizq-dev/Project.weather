@@ -1,7 +1,7 @@
 
 
 
-export const myPosition = (setLat,setLon,setTrigger)=>{
+export const myPosition = (setLat,setLon,setTrigger,setPermiss)=>{
    
   
     if ("geolocation" in navigator) {
@@ -17,6 +17,7 @@ export const myPosition = (setLat,setLon,setTrigger)=>{
     (error) => {
       console.error("Error al obtener la ubicación:", error);
       alert("Accept location permissions")
+      setPermiss(false)
     }
   )}
   else{
