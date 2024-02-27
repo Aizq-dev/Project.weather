@@ -1,0 +1,64 @@
+
+import './PresentDay.css'
+import { tempCelsius } from '../../hooks/tempCelsius'
+import {windDir} from '../../utils/DirectionWind'
+import { firstUpper } from '../../hooks/FirstUpper'
+import { getTime } from '../../hooks/getTime'
+import { getIcon } from '../../hooks/getIcon'
+import { useContext } from 'react'
+import { WeatherDataContext  } from '../../context/weatherDatacontext'
+
+const PresentDay = () => {
+const {weatherData}=useContext(WeatherDataContext)
+
+   
+      
+  return (
+<> 
+    {weatherData.name.length > 2 && 
+        <div className='main'>
+            
+            <div className=' info'>
+                    <div className='temp'>
+                        <div className='name-icon'>  
+                            <h1>{tempCelsius(weatherData.temp)}ºC</h1>
+                            <img src={getIcon(weatherData.icon)}/>
+                        </div>
+        
+                        <p>Feels like {tempCelsius(weatherData.feels_like)}ºC. {firstUpper(weatherData.weather_description)}</p>
+                        <p>Temperature max : {tempCelsius(weatherData.temp_max)}ºC</p>
+                        <p>Temperature min :{tempCelsius(weatherData.temp_min)}ºC</p>
+                    </div>
+                <div className='list'>
+                    <ul>
+                        <li>
+                            <p>Sunrise: {getTime(weatherData.sunrise)} || Sunset: {getTime(weatherData.sunset)}</p>
+                
+                        </li>
+
+                        <li>
+                            <img className='icon icon-wind' src='brujula.png'/>
+                            <p>{weatherData.wind_speed}m/s {windDir(weatherData.wind_deg)}</p>
+                        </li>
+                        <li>
+                            <img className='icon icon-pressure' src='barometro.png'/>
+                            <p>{weatherData.pressure} hPa</p>
+                        </li>
+                        <li>
+                            <p>Humidity: {weatherData.humidity}%</p>
+
+                        </li>
+                    </ul>
+                </div>
+           
+            </div> 
+      
+        
+        </div>
+     } 
+     </>
+      )
+      
+}
+
+export default PresentDay

@@ -1,0 +1,38 @@
+
+.presentDay{
+    padding-top: 2rem;
+}
+.name-icon{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin-top: -2rem;
+       
+}
+.name-icon >img{
+    width: 4rem;
+    height: 4rem;
+}
+.info{
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+.list > ul > li{ display: flex;
+justify-content: center;
+align-items: center;}
+.icon{
+    background-color: white;
+    height: 1.5rem;
+    margin-right: 1rem;
+    border-radius: 50%;
+}
+@media screen and (max-width: 520px){
+    .info{
+        flex-direction: column;
+    }
+    
+}

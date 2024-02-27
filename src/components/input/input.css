@@ -1,0 +1,41 @@
+
+  .div_input {
+    display: flex;
+    height: 45px;
+    
+    border: 2px solid #e2e3e4;
+    border-radius: 7%;
+    transition: 0.4s;
+  }
+  .div_input > input {
+    padding-left: 7px;
+    width: 100%;
+    border:none;
+    outline: none;
+    background-color: white;
+  }
+  .div_input > button {
+    border: none;
+    outline: none;
+    background-color: white;
+  }
+  .lupa {
+    height: 20px;
+    cursor: pointer;
+  }
+  .label_input:hover {
+    border: 2px solid black;
+    width: 95%;
+    margin-right: 300px;
+  }
+  .label_options{
+    transition: 0.4s;
+    background-color: white;
+
+  }
+  .label_options > ul{
+    display: contents;
+    border-radius: 2px solid;
+    list-style: none;
+    text-justify: initial;
+  }

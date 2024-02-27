@@ -1,0 +1,22 @@
+.popup-message {
+    position: fixed;
+    top: 90px; 
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(185, 21, 21, 0.8);
+    color: white;
+    border-radius: 5px;
+   padding: 1px 20px;
+    opacity: 0; 
+  }
+  
+  .popup-message.visible {
+    transition: opacity 0.5s;
+    opacity: 1;
+     
+  }
+  
+  .popup-message.hidden { 
+    transition: opacity 0.5s;
+    opacity: 0; 
+  }
