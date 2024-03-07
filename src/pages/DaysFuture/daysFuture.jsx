@@ -2,9 +2,9 @@ import React, {useContext, useEffect, useState } from 'react'
 import { positionContext } from '../../context/positionContext'
 import { fetch5days } from '../../utils/fetch5daysforecast'
 import { formatHour } from '../../utils/formatHour'
-import { getDateFormat } from '../../hooks/getDateFormat';
-import { getIcon } from '../../hooks/getIcon';
-import {tempCelsius} from '../../hooks/tempCelsius'
+import { getDateFormat } from '../../utils/getDateFormat';
+import {getIcon } from '../../utils/getIcon';
+import {tempCelsius} from '../../utils/tempCelsius'
 import './daysFuture.css'
 
 

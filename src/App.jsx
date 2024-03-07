@@ -10,7 +10,7 @@ import { positionContext } from './context/positionContext';
 function App() {
  const {weatherData,loading}= useContext(WeatherDataContext)
  const {permiss}=useContext(positionContext)
- console.log(permiss)
+
  const [appIcon, setAppIcon]= useState('')
 useEffect(()=>{
   if(weatherData){

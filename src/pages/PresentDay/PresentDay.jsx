@@ -1,10 +1,10 @@
 
 import './PresentDay.css'
-import { tempCelsius } from '../../hooks/tempCelsius'
+import { tempCelsius } from '../../utils/tempCelsius'
 import {windDir} from '../../utils/DirectionWind'
-import { firstUpper } from '../../hooks/FirstUpper'
-import { getTime } from '../../hooks/getTime'
-import { getIcon } from '../../hooks/getIcon'
+import { firstUpper } from '../../utils/FirstUpper'
+import { getTime } from '../../utils/getTime'
+import { getIcon } from '../../utils/getIcon'
 import { useContext } from 'react'
 import { WeatherDataContext  } from '../../context/weatherDatacontext'
 

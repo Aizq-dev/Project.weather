@@ -3,7 +3,7 @@ import './input.css'
 import { positionContext } from '../../context/positionContext'
 import PopupMessage from '../PopupMessage/PopupMessage'
 import { fetchCity } from '../../utils/fetchCity'
-import { WeatherDataContext } from '../../context/weatherDatacontext'
+
 
 const input = () => {
 const [query , setQuery]=useState('')
@@ -55,7 +55,7 @@ useEffect(()=>{
         <ul className='options' id='options'>
           { Object.values(cities).map((option)=>(
            
-            <li key={option.lat} onClick={()=>handleOptionClick(option)}>
+            <li key={`${option.lat}-${Math.random()}`} onClick={()=>handleOptionClick(option)}>
               {option.name}, {option.country}, {option.state}
             </li>
           ))}

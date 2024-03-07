@@ -9,7 +9,7 @@ export const FetchDataWeather = async (setWeatherData, lat, lon, setLoading) => 
 
   try {
     const res = await axios.get(`${URL_API}lat=${lat}&lon=${lon}&appid=${Api_Key}`)
-    
+   
     setWeatherData({
       name :res.data.name,
       country:res.data.sys.country,
@@ -31,6 +31,7 @@ export const FetchDataWeather = async (setWeatherData, lat, lon, setLoading) => 
 
 
     })
+ 
 setLoading(false)
   } catch (error) {
     console.log('Error fetching wheater data',error)

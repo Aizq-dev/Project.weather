@@ -1,4 +1,4 @@
-  import { getDateFromTimestamp } from "../hooks/getDataFromTimeStamp";
+  import { getDateFromTimestamp } from "./getDataFromTimeStamp";
 export const filterList=(cleanData)=>{
 
     const filteredArrays = {};
