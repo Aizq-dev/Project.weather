@@ -10,12 +10,12 @@ import './daysFuture.css'
 
 const DaysFuture = () => {
   const [weatherFuture, setWeatherFuture]=useState('')
-  const {lat,lon, trigger}=useContext(positionContext)
+  const {stateContext,sendAction}=useContext(positionContext)
  const [loading, setLoading]=useState(true)
   useEffect(()=>{
 
-  if(lat)fetch5days(lat, lon, setWeatherFuture, setLoading)
-},[trigger])
+  if(stateContext.lat)fetch5days(stateContext,sendAction, setWeatherFuture, setLoading)
+},[stateContext.trigger])
 
   return (<>
   

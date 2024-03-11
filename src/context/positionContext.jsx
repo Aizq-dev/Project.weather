@@ -1,19 +1,17 @@
-import React,{createContext, useState} from 'react'
-
+import React,{createContext, useState,useReducer} from 'react'
+import reducer from "../reducer/reducer";
 export const positionContext = createContext()
 export const PositionProvider =({children})=>{
-    const [lat , setLat]= useState('')
-   //  (40.45)
-
-    const [lon, setLon]= useState('')
-   //  (-3.7038) 
-    const [trigger, setTrigger]=useState(false)
-   const[permiss,setPermiss] = useState(true)
-
+const [stateContext, sendAction]=useReducer(reducer,{
+   permiss: true,
+   trigger: false,
+   lat : '',
+   lon : ''
+})
 
 
   return (
-   <positionContext.Provider value={{lat,setLat,lon,setLon,trigger,setTrigger,setPermiss,permiss}}>
+   <positionContext.Provider value={{stateContext,sendAction}}>
 {children}
    </positionContext.Provider>  
   )

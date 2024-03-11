@@ -1,24 +1,24 @@
 
 
 
-export const myPosition = (setLat,setLon,setTrigger,setPermiss)=>{
+export const myPosition = (sendAction)=>{
    
   
     if ("geolocation" in navigator) {
 
   navigator.geolocation.getCurrentPosition(
     (position) => {
-       
-      setLat(position.coords.latitude)
-      setLon(position.coords.longitude)
-      setTrigger(prevTrigger => !prevTrigger)
-      setPermiss(true)
+      sendAction({type: 'updateLanAndLot', payload: {lat : position.coords.latitude ,lon: position.coords.longitude}})
+      // setLat(position.coords.latitude)
+      // setLon(position.coords.longitude)
+      // setTrigger(prevTrigger => !prevTrigger)
+      // setPermiss(true)
 
     },
     (error) => {
       console.error("Error al obtener la ubicación:", error);
       alert("Accept location permissions")
-      setPermiss(false)
+      sendAction({type: 'permiss denied'})
     }
   )}
   else{

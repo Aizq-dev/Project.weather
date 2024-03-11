@@ -3,6 +3,7 @@
     -webkit-box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 2px 8px 5px 0px rgba(0,0,0,0.75);
+    
   }
   .div_input {
     display: flex;
@@ -10,8 +11,14 @@
     
     border: 2px solid #e2e3e4;
     border-radius: 7%;
-    transition: 0.4s;
+   
   }
+  .searcher-input{
+    transition: width 0.5s ease;;
+    transition: width 0.5s ease-in;
+   
+  }
+
   .div_input > input {
     padding-left: 7px;
     width: 100%;
@@ -28,12 +35,7 @@
     height: 20px;
     cursor: pointer;
   }
-  .label_input:hover {
-    border: 2px solid black;
-    width: 95%;
-    margin-right: 300px;
 
-  }
   .label_options{
     transition: 0.4s;
     background-color: white;
@@ -45,6 +47,7 @@
     border-radius: 2px solid;
     list-style: none;
     text-justify: initial;
+    overflow: hidden;
   }
   .label_options >img{
     width: 20px;
@@ -52,4 +55,10 @@
   }
   .searcher-input{
     color: black;
+  }
+  @media screen and (max-width: 500px){
+    .searcher-input{
+      max-width: 150px;
+    }
+ 
   }

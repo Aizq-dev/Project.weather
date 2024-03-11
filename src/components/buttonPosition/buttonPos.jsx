@@ -5,9 +5,9 @@ import { positionContext } from '../../context/positionContext'
 
 export const ButtonPos = () => {
 
-const{setLat,setLon,setTrigger,setPermiss}=useContext(positionContext)
+const{sendAction}=useContext(positionContext)
   const handleButton =()=>{
-myPosition(setLat, setLon,setTrigger,setPermiss)
+myPosition(sendAction)
  }
   
   return (
